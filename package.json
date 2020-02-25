@@ -1,7 +1,7 @@
 {
-  "name": "@gosls/tencent-tornado",
+  "name": "@serverless/tencent-tornado",
   "description": "Tencent Cloud Python Tornado Serverless Component",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "main": "serverless.js",
   "publishConfig": {
     "access": "public"
