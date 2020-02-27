@@ -7,7 +7,7 @@
 
 tornado:
   region: ap-guangzhou
-  component: '@gosls/tencent-tornado'
+  component: '@serverless/tencent-tornado'
   inputs:
     region: ap-guangzhou
     tornadoProjectName: myproject

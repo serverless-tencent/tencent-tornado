@@ -60,7 +60,7 @@ $ touch serverless.yml
 
 ```yml
 TornadoTest:
-  component: '@gosls/tencent-tornado'
+  component: '@serverless/tencent-tornado'
   inputs:
     region: ap-guangzhou
     functionName: tornadoFunctionTest

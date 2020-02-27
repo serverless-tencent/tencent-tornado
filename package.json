@@ -72,10 +72,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gosls/tencent-pyramid.git"
+    "url": "git+https://github.com/serverless-components/tencent-pyramid.git"
   },
   "bugs": {
-    "url": "https://github.com/gosls/tencent-pyramid/issues"
+    "url": "https://github.com/serverless-components/tencent-pyramid/issues"
   },
-  "homepage": "https://github.com/gosls/tencent-pyramid#readme"
+  "homepage": "https://github.com/serverless-components/tencent-pyramid#readme"
 }
