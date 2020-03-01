@@ -1,3 +1,7 @@
+[![Serverless Tornado Tencent Cloud](https://img.serverlesscloud.cn/202031/1583057587331-tornado_%E9%95%BF.png)](http://serverless.com)
+
+&nbsp;
+
 # 腾讯云 Tornado Serverless Component
 
 ## 简介
