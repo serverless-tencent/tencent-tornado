@@ -147,6 +147,7 @@ class TencentTornado extends Component {
         function: {
           isIntegratedResponse: true,
           functionName: functionConf.name
+          functionNamespace: functionConf.namespace
         }
       }
     ]
