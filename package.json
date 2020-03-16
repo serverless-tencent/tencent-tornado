@@ -14,17 +14,40 @@
     "tencent"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint . --fix --cache"
+    "commitlint": "commitlint -f HEAD@{15}",
+    "test": "tape *.test.js",
+    "lint": "eslint --ext .js,.ts,.tsx .",
+    "lint:fix": "eslint --fix --ext .js,.ts,.tsx .",
+    "prettier": "prettier --check **/*.{css,html,js,json,md,yaml,yml}",
+    "prettier:fix": "prettier --write **/*.{css,html,js,json,md,yaml,yml}",
+    "release": "standard-version"
   },
   "author": "Dfounderliu",
   "license": "Apache-2.0",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,ts,tsx}": [
+      "eslint --fix --ext .js,.ts,.tsx .",
+      "git add ."
+    ],
+    "**/*.{css,html,js,json,md,yaml,yml}": [
+      "npm run prettier:fix",
+      "git add ."
+    ]
+  },
+  "standard-version": {
+    "skip": {
+      "tag": false
+    }
+  },
   "dependencies": {
     "@serverless/core": "^1.1.1",
-    "@serverless/tencent-apigateway-multi-region": "^0.0.3",
-    "@serverless/tencent-scf-multi-region": "^0.0.4",
-    "@serverless/tencent-domain": "^0.0.2",
-    "@serverless/tencent-cns": "^0.0.4",
+    "@serverless/tencent-framework": "^0.0.1",
     "ext": "^1.4.0",
     "type": "^2.0.0"
   },
