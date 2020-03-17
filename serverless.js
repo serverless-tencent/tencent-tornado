@@ -69,7 +69,12 @@ class TencentTornado extends Component {
 
   async remove(inputs = {}) {
     const Framework = await this.load('@serverless/tencent-framework')
-    await Framework.remove(inputs)
+    await Framework.remove({
+      ...inputs,
+      ...{
+        framework: 'tornado'
+      }
+    })
     this.state = {}
     await this.save()
     return {}
